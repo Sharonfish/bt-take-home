@@ -84,7 +84,8 @@ Also, feel free to change the file structure or design if you'd like. You don't 
    - The `PokemonCard` component has already been defined for you for the Browse page, so I would suggest reusing it here
 
 For reference, here's a video of the most basic finished product:
-![]()
+
+https://github.com/mathhulk/bt-take-home/assets/19879953/66076249-c7b2-4164-beca-0135cd35d757
 
 ### Submitting
 
