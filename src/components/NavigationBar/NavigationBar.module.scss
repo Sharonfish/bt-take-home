@@ -1,0 +1,39 @@
+.root {
+  background-color: #ef4444;
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+
+    p.brand {
+      color: white;
+    }
+
+    .menu {
+      display: flex;
+      gap: 16px;
+
+      a.link {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        
+        padding: 0 16px;
+        border-radius: 4px;
+
+        color: rgb(255 255 255 / 50%);
+        font-weight: 500;
+        
+        &:global(.active) {
+          background-color: rgb(255 255 255 / 10%);
+        }
+
+        &:hover, &:global(.active) {
+          color: white;
+        }
+      }
+    }
+  }
+}

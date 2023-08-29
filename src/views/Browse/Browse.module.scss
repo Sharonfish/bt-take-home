@@ -1,0 +1,29 @@
+.root {
+  padding: 24px 0;
+
+  .grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+  }
+
+  .button {
+    height: 36px;
+    display: flex;
+    align-items: center;
+
+    margin-top: 24px;
+    padding: 0 16px;
+    border-radius: 4px;
+
+    background-color: #ef4444;
+
+    font-weight: 500;
+    color: rgb(255 255 255 / 50%);
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
