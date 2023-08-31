@@ -1,7 +1,7 @@
 import styles from "./Browse.module.scss";
 
 export default function Browse() {
-  // TODO: Dispatch the action to Redux for saving a Pokemon the visitor's profile
+  // TODO: Save a selected Pokemon for the Profile page
 
   // TODO: Load the list of Pokemon when the page loads and when the visitor clicks the "Load more"
   //   button using the fetchPokemonList function defined in api.ts
