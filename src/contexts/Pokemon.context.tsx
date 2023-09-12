@@ -1,6 +1,7 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { Pokemon, PokemonContextType } from '../types/Pokemon.type';
 import { fetchPokemonList } from '../lib/api';
+import { HOMEPAGE_POKEMON_COUNT, POKEMON_PER_PAGE } from '../constants';
 
 const PokemonContext = createContext<PokemonContextType>({
     homepagePokemon: [],
@@ -19,20 +20,20 @@ export const PokemonProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
     const [browseOffset, setBrowseOffset] = useState(0);
   
-    // Fetch the top 10 Pokemon for the homepage
+    // Fetch the top Pokemon for the homepage. Default: 12
     const fetchHomepagePokemon = async () => {
         try {
-            const data = await fetchPokemonList(12, 0); // Fetch the first 10 Pokemon
+            const data = await fetchPokemonList(HOMEPAGE_POKEMON_COUNT, 0);
             setHomepagePokemon(data);
         } catch (error) {
             console.error('Error fetching homepage Pokemon:', error);
         }
     };
   
-    // Fetch 25 Pokemon for the browse page
+    // Fetch Pokemon for the browse page. Default: 25
     const fetchBrowsePokemon = async () => {
         try {
-            const data = await fetchPokemonList(25, browseOffset);
+            const data = await fetchPokemonList(POKEMON_PER_PAGE, browseOffset);
             setBrowsePokemon((prevPokemon) => [...prevPokemon, ...data]);
         } catch (error) {
             console.error('Error fetching browse Pokemon:', error);
@@ -41,7 +42,7 @@ export const PokemonProvider: React.FC<{ children: React.ReactNode }> = ({ child
   
     // Fetch more Pokemon for the browse page when "Load More" is clicked
     const fetchMoreBrowsePokemon = () => {
-      setBrowseOffset((prevOffset) => prevOffset + 25);
+      setBrowseOffset((prevOffset) => prevOffset + POKEMON_PER_PAGE);
     };
 
     // Select a Pokemon and add it to the selectedPokemon list

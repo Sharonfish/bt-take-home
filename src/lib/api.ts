@@ -1,6 +1,5 @@
 import { Pokemon, PaginatedPokemonList } from '../types/Pokemon.type';
-
-const BASE_URL:string = 'https://pokeapi.co/api/v2';
+import { BASE_URL } from '../constants';
 
 // TODO: Fetch the PokeAPI for a single Pokemon
 export const fetchPokemon = async (name: string): Promise<Pokemon> => {

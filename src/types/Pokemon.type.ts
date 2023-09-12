@@ -19,6 +19,11 @@ export interface PaginatedPokemonList {
     ]
 }
 
+export interface PokemonCardProps {
+    pokemon: Pokemon;
+    showSelect: boolean;
+}
+
 export interface PokemonContextType {
     homepagePokemon: Pokemon[];
     browsePokemon: Pokemon[];

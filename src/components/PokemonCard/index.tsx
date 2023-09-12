@@ -1,12 +1,6 @@
-import { Pokemon } from "../../types/Pokemon.type"
+import { PokemonCardProps } from "../../types/Pokemon.type"
 import { usePokemon } from "../../contexts/Pokemon.context";
 import styles from "./PokemonCard.module.scss";
-import { useState } from "react";
-
-export interface PokemonCardProps {
-  pokemon: Pokemon;
-  showSelect: boolean;
-}
 
 export default function PokemonCard(pokemonCardProps: PokemonCardProps) {
   // TODO: Finish implementing this component or make your own reusable component;
