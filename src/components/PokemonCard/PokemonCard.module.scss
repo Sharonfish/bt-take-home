@@ -2,6 +2,37 @@
   border-radius: 8px;
   background-color: white;
   padding: 16px;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
   // TODO: Finish implementing the design for the PokemonCard
+
+  .imageContainer {
+    width: 100%;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .button {
+    height: 36px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+    padding: 0 16px;
+    border-radius: 4px;
+
+    font-weight: 500;
+    color: rgb(255 255 255 / 50%);
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
 }

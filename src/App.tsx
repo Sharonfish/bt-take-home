@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { PokemonProvider } from "./contexts/Pokemon.context";
 import Home from "./views/Home";
 import Browse from "./views/Browse";
 import Profile from "./views/Profile";
@@ -16,5 +17,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <PokemonProvider>
+      <RouterProvider router={router} />
+    </PokemonProvider>
+  )
 }
